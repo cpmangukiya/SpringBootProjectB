@@ -23,13 +23,20 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //http.authorizeRequests().antMatchers("/**").permitAll().and().csrf().disable();
         http.authorizeRequests()
                 .requestMatchers(EndpointRequest.to("info")).permitAll()
-                // TODO: Find a solution here .requestMatchers(EndpointRequest.to("h2-console")).permitAll()
                 .requestMatchers(EndpointRequest.toAnyEndpoint()).hasRole("ACTUATOR")
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
+                .antMatchers("/h2-console/**").permitAll()
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/**").permitAll()
+                .and()
+                .headers().frameOptions().disable()
+                .and()
+                .csrf().ignoringAntMatchers("/ws/**")
+                .and()
+                .csrf().ignoringAntMatchers("/h2-console/**")
                 .and().httpBasic();
     }
 }
