@@ -29,6 +29,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .requestMatchers(EndpointRequest.toAnyEndpoint()).hasRole("ACTUATOR")
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .antMatchers("/h2-console/**").permitAll()
+                .antMatchers("/actuator/**").permitAll()
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/**").permitAll()
                 .and()
@@ -37,6 +38,9 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .csrf().ignoringAntMatchers("/ws/**")
                 .and()
                 .csrf().ignoringAntMatchers("/h2-console/**")
-                .and().httpBasic();
+                .and()
+                .csrf().ignoringAntMatchers("/actuator/**")
+                .and()
+                .httpBasic();
     }
 }
