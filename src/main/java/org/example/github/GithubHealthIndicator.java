@@ -1,13 +1,9 @@
 package org.example.github;
 
-import org.slf4j.ILoggerFactory;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-
-import java.util.function.DoubleToIntFunction;
-import java.util.logging.Logger;
 
 @Component
 public class GithubHealthIndicator implements HealthIndicator {

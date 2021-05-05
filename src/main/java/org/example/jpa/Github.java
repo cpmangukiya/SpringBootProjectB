@@ -7,8 +7,8 @@ import javax.persistence.*;
 public class Github {
 
     @Id
-    @GeneratedValue
-    private Long id;
+    @GeneratedValue()
+    private Long id ;
 
     @Column(length = 50)
     private String orgName;

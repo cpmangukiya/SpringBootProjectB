@@ -1,7 +1,6 @@
 package org.example.jpa;
 
 import java.util.List;
-
 import org.example.github.GithubEvent;
 
 public class DashboardEntry {

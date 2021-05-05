@@ -2,6 +2,7 @@ package org.example.jpa;
 
 import org.example.github.GithubClient;
 import org.example.github.GithubEvent;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,7 +36,7 @@ public class EventsController {
      * @param repoName
      * @return
      */
-    @GetMapping("/events/{repoName}")
+    @GetMapping(value = "/events/{repoName}")
     @ResponseBody
     public GithubEvent[] fetchEvents(@PathVariable String repoName) {
         try {
