@@ -1,6 +1,9 @@
 package org.example.jpa;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 // Create this class and add jpa and h2 starters and the table to automatically created for you
 @Entity

@@ -1,7 +1,5 @@
 package org.example.generics;
 
-import java.net.URL;
-
 public class MaximumTest {
     // determines the largest of three Comparable objects
 

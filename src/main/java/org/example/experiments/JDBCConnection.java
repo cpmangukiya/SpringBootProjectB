@@ -1,8 +1,5 @@
 package org.example.experiments;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.sql.DataSource;
 import java.sql.*;
 
 public class JDBCConnection {
