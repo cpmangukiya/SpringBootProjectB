@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.springframework.util.Assert;
 
 /**
- * Unit sample for simple App.
+ * Unit sample with mutation testing for simple App.
  */
 public class MutationPalindromeFunctionTest
 {

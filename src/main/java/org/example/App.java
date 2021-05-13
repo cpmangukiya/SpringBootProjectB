@@ -10,13 +10,11 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
  *
  */
 @SpringBootApplication
-//@ComponentScan(basePackageClasses = EventsController.class)
 @EnableConfigurationProperties(GithubProperties.class)
 public class App 
 {
     public static void main( String[] args )
-{
-    System.out.println( "Hello World!" );
-    SpringApplication.run(App.class, args);
-}
+    {
+        SpringApplication.run(App.class, args);
+    }
 }
