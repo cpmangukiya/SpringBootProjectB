@@ -2,6 +2,10 @@
 
 https://localhost:8443/spring-app
 
+https://localhost:8443/spring-app/actuator
+
+https://localhost:8443/spring-app/actuator/shutdown
+
 https://localhost:8443/spring-app/ws/countries.wsdl
 
 swagger ui

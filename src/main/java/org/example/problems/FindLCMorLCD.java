@@ -1,12 +1,12 @@
 package org.example.problems;
 
-public class FindLCM {
+public class FindLCMorLCD {
 
     public static void main(String[] args) {
         // Multiples of 4: 4, 8, 12, 16, 20, 24, 28
         // Multiples of 10: 10, 20, 30, 40
         // Here, the number 20 is the first common multiple of both 4 and 10.
-        // So, the LCM of 4, 10 is 20.
+        // So, the Lowest Common Multiple ( LCM ) and Least Common Divisor ( LCD) of 4, 10 is 20.
         System.out.println(findLCMBruteForce(10, 15));
 
         // Efficient way :    LCM(a, b) = (a x b) / GCD(a, b)

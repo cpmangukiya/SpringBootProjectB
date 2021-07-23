@@ -1,4 +1,4 @@
-package org.example.generics;
+package org.example.problems.experiments.generics;
 
 public class Box<T> {
     private T t;

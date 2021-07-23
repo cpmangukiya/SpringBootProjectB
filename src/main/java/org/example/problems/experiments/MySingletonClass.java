@@ -1,4 +1,4 @@
-package org.example.experiments;
+package org.example.problems.experiments;
 
 public class MySingletonClass {
 

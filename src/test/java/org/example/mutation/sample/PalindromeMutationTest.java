@@ -6,7 +6,7 @@ import org.springframework.util.Assert;
 /**
  * Unit sample with mutation testing for simple App.
  */
-public class MutationPalindromeFunctionTest
+public class PalindromeMutationTest
 {
     @Test
     public void testIsPalindromeMutationTesting()

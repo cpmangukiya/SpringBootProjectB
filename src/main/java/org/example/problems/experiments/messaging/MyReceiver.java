@@ -1,4 +1,4 @@
-package org.example.messaging;
+package org.example.problems.experiments.messaging;
 
 import javax.jms.*;
 import javax.naming.InitialContext;

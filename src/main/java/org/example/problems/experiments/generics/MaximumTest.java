@@ -1,4 +1,4 @@
-package org.example.generics;
+package org.example.problems.experiments.generics;
 
 public class MaximumTest {
     // determines the largest of three Comparable objects

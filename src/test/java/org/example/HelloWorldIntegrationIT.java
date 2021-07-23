@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-public class HelloWorldIntegrationTest {
+public class HelloWorldIntegrationIT {
 
     @Autowired
     private MockMvc mockMvc;
