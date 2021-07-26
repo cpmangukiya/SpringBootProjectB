@@ -77,4 +77,10 @@ public class PrintMatrixInSpiralForm {
 
     }
 
+    public void someMethod() {
+        class SampleCls {
+
+        }
+    }
+
 }

@@ -43,7 +43,6 @@ public class RearrangBiggestNumToFormLargestNumber {
         // Driver code
         public static void main(String[] args)
         {
-
             Vector<String> arr;
             arr = new Vector<>();
 
@@ -56,5 +55,9 @@ public class RearrangBiggestNumToFormLargestNumber {
             arr.add("60");
             printLargest(arr);
         }
+
+    {
+        int i = 0;
+    }
 
 }

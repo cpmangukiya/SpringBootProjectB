@@ -5,6 +5,8 @@ public class FibonacciSeries {
         // 0 1 1 2 3 5 8 13 21 34 55
         // Total of prev two is next
         printFibonacciNumbers(12);
+        System.out.println();
+        recursivePrintAll(12); //Not working
 
         System.out.println();
         System.out.println(printNthFibonacciNumberRecursive(7));
@@ -37,5 +39,12 @@ public class FibonacciSeries {
         if(i <= 1) return i;
 
         return recursive(i-1)+recursive(i-2);
+    }
+
+    private static void recursivePrintAll(int i) {
+        if(i <= 1) System.out.print(i+" ");
+
+        int number = recursive(i-1)+recursive(i-2);
+        System.out.print(number+" ");
     }
 }
