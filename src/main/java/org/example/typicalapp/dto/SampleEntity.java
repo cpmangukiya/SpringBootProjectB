@@ -21,7 +21,14 @@ public class SampleEntity {
     @Column(name = "NAME", unique = true)
     private String name;
 
+    private int a;
+
+    private long b;
+
+    private double c;
+
     public SampleEntity(String name) {
         this.name = name;
+        int result = 1 * 59 + (int)this.getC();
     }
 }

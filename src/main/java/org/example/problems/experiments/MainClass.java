@@ -5,18 +5,24 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
+import java.util.function.DoubleFunction;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-public class MainClass {
+public class MainClass{
 
-    final String key;
+    final String key = getKey();
 
-    public MainClass(String value) {
-        this.key = value;
+    public MainClass() {
+       // this.key = value;
+    }
+
+    //{this.key = "value";getKey();}
+
+    public String getKey() {
+        return key;
     }
 
     public static void mainStudent(String[] args) throws IOException {
@@ -97,17 +103,20 @@ public class MainClass {
         students.setAge(1);
     }
 
-    public void mainThread(String[] args) throws InterruptedException {
+    public static void main222(String[] args) throws InterruptedException, ExecutionException {
         Thread t1 = new Thread(() -> {System.out.println("thread is running");});
         t1.start();
         t1.interrupt();
         Thread.interrupted();
         t1.isInterrupted();
-
-        wait();
+        //wait();
 
         ExecutorService executorService = Executors.newFixedThreadPool(4);
-        executorService.submit(() -> {});
+        executorService.submit(() -> { System.out.println("print") ;});
+        System.out.println(executorService.submit(() -> { return 3 * 2;}).get());
+        executorService.execute(() -> { System.out.println("print") ;});
+
+        System.out.println(new MainClass().getKey());
     }
 
     public static void mainFuture(String[] args) {
@@ -123,7 +132,7 @@ public class MainClass {
         integerFuture.isCancelled();
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void mainSpliterator(String[] args) throws IOException {
 
         new ArrayList<>(new ArrayList<>());
         Collections.emptyList();
@@ -161,4 +170,49 @@ public class MainClass {
         System.out.println("spliterator3: " + spliterator3.estimateSize());
         System.out.println("spliterator4: " + spliterator4.estimateSize());
     }
+
+    public static void main2(String[] args) {
+        DoubleFunction<Object> doubleFunction = value -> new Object();
+        DoubleFunction<Object> doubleFunction2 = value -> 1;
+
+        List list = new ArrayList();
+
+        List<String> result = Stream.of("a" , "b")
+                .collect(Collectors.toCollection(LinkedList::new));
+
+        Map map = new ConcurrentSkipListMap<String, String>();
+
+        System.out.println(new ArrayList<>(Arrays.asList("b","a")).equals(new ArrayList<>(Arrays.asList("b","a"))));
+        System.out.println(new ArrayList<>(Arrays.asList("b","a")).equals(new ArrayList<>(Arrays.asList("a","b"))));
+        System.out.println(new HashSet<>(Arrays.asList("b","a")).equals(new HashSet<>(Arrays.asList("b","a"))));
+        System.out.println(new HashSet<>(Arrays.asList("a","b")).equals(new HashSet<>(Arrays.asList("b","a"))));
+
+        //Stream.of("a" , "b")
+          //      .collect(Collectors.toCollection(() -> Collections.unmodifiableList(Arrays.asList("a"))));
+            // Throws run time UnsupportedOperationException
+    }
+
+    public static void main(String[] args) {
+        synchronized (MainClass.class) {
+
+        }
+        //synchronized (this) {        }
+        synchronized (new MainClass()) {
+
+        }
+    }
+
+    public void main3333(String[] args) {
+        synchronized (MainClass.class) {
+
+        }
+        synchronized (this) {
+
+        }
+        synchronized (new MainClass()) {
+
+        }
+    }
+
 }
+

@@ -30,7 +30,7 @@ public class RearrangBiggestNumToFormLargestNumber {
                     // Now see which of the two
                     // formed numbers
                     // is greater
-                    return XY.compareTo(YX) > 0 ? -1 : 1;
+                    return XY.compareTo(YX) > 0 ? -1 : 1;  // 98, 99 -> 9899, 9998
                 }
             });
 
@@ -39,6 +39,8 @@ public class RearrangBiggestNumToFormLargestNumber {
             while (it.hasNext())
                 System.out.print(it.next());
         }
+
+
 
         // Driver code
         public static void main(String[] args)
@@ -52,6 +54,7 @@ public class RearrangBiggestNumToFormLargestNumber {
             arr.add("9");
             arr.add("548");
             arr.add("98");
+            arr.add("99");
             arr.add("60");
             printLargest(arr);
         }

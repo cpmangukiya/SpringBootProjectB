@@ -44,7 +44,7 @@ public class CheckValidTree {
 
         if(binaryTree.length == 1) return "TRUE";
 
-        int levels = (int) Math.sqrt(binaryTree.length);
+        int levels = (int) Math.sqrt(binaryTree.length) ;
         System.out.println("Layers : "+levels);
 
         int parent = 0;

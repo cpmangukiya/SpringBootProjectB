@@ -1,9 +1,7 @@
 package org.example.problems;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class LRUCache {
 
@@ -29,9 +27,8 @@ public class LRUCache {
     }
 
     public void display(){
-        List list = Arrays.asList(linkedHashSet.toArray());
-        Collections.reverse(list);
-        list.forEach(System.out::println);
+        ListIterator<Integer> listIterator = new ArrayList<>(linkedHashSet).listIterator(linkedHashSet.size());
+        while(listIterator.hasPrevious()) { System.out.print(listIterator.previous()+" "); }
     }
 
 

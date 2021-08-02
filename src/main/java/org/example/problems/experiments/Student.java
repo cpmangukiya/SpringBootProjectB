@@ -1,47 +1,36 @@
 package org.example.problems.experiments;
 
+import lombok.*;
+
+@Getter
+@Setter
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Student extends Object {
 
     private String name;
 
     private Integer age;
 
-    public String getName() {
-        return name;
-    }
+    private int std;
 
-    public void setName(String name) {
+    private Standard standard;
+
+    public Student(String name) {
         this.name = name;
     }
+}
 
-    public int getAge() {
-        return age;
-    }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+@Getter
+@Setter
+@EqualsAndHashCode
+@AllArgsConstructor
+@Data
+class Standard extends Object {
 
-    @Override
-    public boolean equals(Object object) {
-        if(!(object instanceof Student)) {
-            return false;
-        }
-        Student student = (Student) object;
-        if(this.getName().equals(student.getName()) && this.getAge() == student.getAge()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    @Override
-    public int hashCode() {
-        int prime = 31;
-        int result = 1;
-        result = prime * result + ((this.name == null) ? 0 : name.hashCode());
-        result = prime * result + ((this.age == null) ? 0 : age.hashCode());
-        return result;
-    }
+    private Integer classValue;
 
 }

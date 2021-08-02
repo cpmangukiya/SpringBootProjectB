@@ -30,7 +30,7 @@ public class PrimeNumbers {
     }
 
 
-    static int i=2;
+    static int i=5;
     private static boolean isPrimeRecursive(int n) {
         if(n <= 1) {
             return false;
@@ -38,10 +38,16 @@ public class PrimeNumbers {
         if(i == n) {
             return true;
         }
+        if(n % 2 == 0) {
+            return false;
+        }
         if(n % i == 0) {
             return false;
         }
-        i++;
+        if(i > Math.sqrt(n)) {
+            return true;
+        }
+        i = i+2;
         return isPrimeRecursive(n);
     }
 
@@ -52,7 +58,7 @@ public class PrimeNumbers {
         if(n <= 1) {
             return false;
         }
-        if(n == 2) {
+        if(n == 2 || n == 3) {
             return true;
         }
         if(n % 2 == 0) {

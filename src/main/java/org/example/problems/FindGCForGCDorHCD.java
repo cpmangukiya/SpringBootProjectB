@@ -3,8 +3,8 @@ package org.example.problems;
 public class FindGCForGCDorHCD {
 
     public static void main(String[] args) {
-        // Factors of 32 = 1, 2, 4, 8, 16 and 32.
-        // Factors of 80 = 1,2,4,5,8,10,16, 20 and 80.
+        // Factors of 32 = 1, 2, 4, 8, 16 and 32. Prime factors :      2×2x2x2x2
+        // Factors of 80 = 1,2,4,5,8,10,16, 20 and 80. Prime factors : 2×2×2×2×5
         // Therefore, common factor of 32 and 80= 1, 2, 4,8 and 16.
         // Greatest common factor (G.C.F) of 32 and 80 = 16.
         // Greatest common divisor, sometimes also called the Highest common divisor

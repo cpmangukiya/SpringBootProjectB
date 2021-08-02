@@ -51,5 +51,25 @@ public class DeleteANodeFromSinglyLinkedList {
         System.gc();
     }
 
+    void deleteNode(int data)
+    {
+        if(head.data == data) {
+            head = head.next;
+        }
+
+        Node previousNode = head;
+        Node nextNode = head.next;
+        while(nextNode != null) {
+            if(nextNode.data == data) {
+                previousNode.next = nextNode.next;
+                System.gc();
+                break;
+            } else {
+                previousNode = nextNode;
+                nextNode = nextNode.next;
+            }
+        }
+    }
+
 
 }

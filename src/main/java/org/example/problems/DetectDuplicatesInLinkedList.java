@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public class DetectDuplicatesInLinkedList {
 
-    /* Driver program to test above function */
+    /* Driver program to exam above function */
     public static void main(String[] args)
     {
         DetectDuplicatesInLinkedList llist = new DetectDuplicatesInLinkedList();

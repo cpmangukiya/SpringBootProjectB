@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class FindAPairWithGivenSum {
 
-    // Driver method to test the above function
+    // Driver method to exam the above function
     public static void main(String[] args)
     {
         System.out.println( "Count of pairs is " + getPairsCountHashing(6, new int[] { 1, 5, 7, -1, 5 }));

@@ -17,7 +17,7 @@ public class LargestSubStringWithUniqueChars {
     private static String findUniqueString(String value) {
 
         int maxLength = 0;
-        int resultStartIndex = 0;
+        int maxStartIndex = 0;
 
         int candidateLength = 0;
         int candidateStartIndex = 0;
@@ -34,7 +34,7 @@ public class LargestSubStringWithUniqueChars {
                     candidateLength = i - candidateStartIndex;
                     if(maxLength < candidateLength) {
                         maxLength = candidateLength;
-                        resultStartIndex = candidateStartIndex;
+                        maxStartIndex = candidateStartIndex;
                     }
                     candidateStartIndex = hashMap.get(value.charAt(i))+1;
                 }
@@ -44,9 +44,9 @@ public class LargestSubStringWithUniqueChars {
 
         if(maxLength < stringLength-candidateStartIndex) {
             maxLength = stringLength-candidateStartIndex;
-            resultStartIndex = candidateStartIndex;
+            maxStartIndex = candidateStartIndex;
         }
 
-        return value.substring(resultStartIndex, resultStartIndex + maxLength);
+        return value.substring(maxStartIndex, maxStartIndex + maxLength);
     }
 }

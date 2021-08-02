@@ -1,5 +1,9 @@
 package org.example.problems.experiments;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
 public class Students implements  Comparable<Students>{
     public int getRollNo() {
         return rollNo;
@@ -44,4 +48,5 @@ public class Students implements  Comparable<Students>{
             return -1;
         }
     }
+
 }

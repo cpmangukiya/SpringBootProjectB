@@ -73,7 +73,7 @@ public class LongestPalindrome {
         return maxLength;
     }
 
-    // Driver program to test above function
+    // Driver program to exam above function
     public static void main(String[] args)
     {
 

@@ -9,7 +9,7 @@ public class PrintMatrixInSpiralForm {
                                     {4,5,6},
                                     {7,8,9}};
 
-        printInSpiralFormWrong(integerMatrix1);
+        printInSpiralForm(integerMatrix1);
         System.out.println();
 
 
@@ -18,7 +18,7 @@ public class PrintMatrixInSpiralForm {
                                      {7,8,9,77},
                                      {10,11,12,88}};
 
-        printInSpiralFormWrong(integerMatrix11);
+        printInSpiralForm(integerMatrix11);
         System.out.println();
 
 
@@ -26,7 +26,7 @@ public class PrintMatrixInSpiralForm {
                                      { 7, 8, 9, 10, 11, 12 },
                                      { 13, 14, 15, 16, 17, 18 }   };
 
-        printInSpiralFormWrong(integerMatrix2); //result 1 2 3 4 5 6 12 18 17 16 15 14 13 7 8 9 10 11
+        printInSpiralForm(integerMatrix2); //result 1 2 3 4 5 6 12 18 17 16 15 14 13 7 8 9 10 11
         System.out.println();
 
 
@@ -36,11 +36,11 @@ public class PrintMatrixInSpiralForm {
                                       { 17, 18, 19, 20 },
                                       { 21, 22, 23, 24 }};
 
-        printInSpiralFormWrong(integerMatrix22);
+        printInSpiralForm(integerMatrix22);
 
     }
 
-    private static void printInSpiralFormWrong(int[][] integerMatrix) {
+    private static void printInSpiralForm(int[][] integerMatrix) {
 
             int top = 0;
             int right = integerMatrix[0].length; // Initial 2
@@ -77,10 +77,5 @@ public class PrintMatrixInSpiralForm {
 
     }
 
-    public void someMethod() {
-        class SampleCls {
-
-        }
-    }
 
 }
