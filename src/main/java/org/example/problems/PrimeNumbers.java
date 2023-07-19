@@ -30,7 +30,7 @@ public class PrimeNumbers {
     }
 
 
-    static int i=5;
+    static int i=3;
     private static boolean isPrimeRecursive(int n) {
         if(n <= 1) {
             return false;

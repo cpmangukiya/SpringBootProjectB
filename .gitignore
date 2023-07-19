@@ -3,3 +3,4 @@
 /application-info*
 /*.log
 /*.log.*
+/.idea/sonarlint/*

@@ -54,36 +54,34 @@ class AbsoluteDifferenceCounterToLeft {
         BufferedReader bufferedReader;
         BufferedWriter bufferedWriter;
 
-            bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+        bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
-            int arrCount = Integer.parseInt(bufferedReader.readLine().trim());
+        int arrCount = Integer.parseInt(bufferedReader.readLine().trim());
 
-            List<Long> arr = new ArrayList<>();
+        List<Long> arr = new ArrayList<>();
 
+        String[] line = bufferedReader.readLine().trim().split(" ");
 
-            String[] line = bufferedReader.readLine().trim().split(" ");
+        for (int i = 0; i < arrCount; i++) {
+            long arrItem = Long.parseLong(line[i]);
+            arr.add(arrItem);
+        }
 
-            for (int i = 0; i < arrCount; i++) {
-                long arrItem = Long.parseLong(line[i]);
-                arr.add(arrItem);
+        List<Long> result = Result.arrayChallenge(arr);
+
+        for (int i = 0; i < result.size(); i++) {
+            bufferedWriter.write(String.valueOf(result.get(i)) + " ");
+
+            if (i != result.size() - 1) {
+                //bufferedWriter.write("\n");
             }
+        }
 
-            List<Long> result = Result.arrayChallenge(arr);
+        bufferedWriter.newLine();
 
-            for (int i = 0; i < result.size(); i++) {
-                bufferedWriter.write(String.valueOf(result.get(i)) + " ");
-
-                if (i != result.size() - 1) {
-                    //bufferedWriter.write("\n");
-                }
-            }
-
-            bufferedWriter.newLine();
-
-
-            bufferedReader.close();
-            bufferedWriter.close();
+        bufferedReader.close();
+        bufferedWriter.close();
 
     }
 }

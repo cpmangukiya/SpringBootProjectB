@@ -36,5 +36,7 @@ public class FindAllPrimeFactors
         primeFactors(315);
         System.out.println();
         primeFactors(22);
+        System.out.println();
+        primeFactors(3);
     }
 }

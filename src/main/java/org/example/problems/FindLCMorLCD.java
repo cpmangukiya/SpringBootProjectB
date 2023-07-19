@@ -14,6 +14,11 @@ public class FindLCMorLCD {
         System.out.println("LCM of " + a +
                 " and " + b +
                 " is " + lcm(a, b));
+
+        a = 5; b = 10;
+        System.out.println("LCM of " + a +
+                " and " + b +
+                " is " + lcm(a, b));
     }
 
     private static int findLCMBruteForce(int a, int b) {

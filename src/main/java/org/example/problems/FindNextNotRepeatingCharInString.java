@@ -29,7 +29,7 @@ public class FindNextNotRepeatingCharInString {
         int res = -1;
 
         for(int i = 0; i < 256; i++) {
-            if(chars[i] > 0 && res == -1) {
+            if(chars[i] >= 0 && res == -1) {
                 res = chars[i];
             } else if(chars[i] > 0) {
                 res = Math.min(res, chars[i]);

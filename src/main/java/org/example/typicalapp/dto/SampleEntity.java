@@ -8,9 +8,12 @@ import javax.persistence.*;
 
 @Data
 @Entity
+@org.hibernate.annotations.Entity()
 @Table(name = "SAMPLE_TABLE")
 @NoArgsConstructor
 @AllArgsConstructor
+@SecondaryTable(name = "a")
+@SecondaryTable(name = "b")
 public class SampleEntity {
 
     @Id

@@ -1,10 +1,8 @@
 package org.example.problems;
 
-import org.hibernate.engine.transaction.jta.platform.internal.SynchronizationRegistryAccess;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class LargestSubStringWithUniqueChars {
 

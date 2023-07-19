@@ -12,12 +12,12 @@ public class ReverseStringRecursive {
 
     }
 
-    private static String reverseAStringRecursive(String shrunkValue) {
+    private static void reverseAStringRecursive(String shrunkValue) {
         if(shrunkValue.length() > 1) {
             reverseAStringRecursive(shrunkValue.substring(1));
         }
         System.out.print(shrunkValue.charAt(0));
-        return shrunkValue;
+        return;
     }
 
     private static String reverseAString(String value) {
